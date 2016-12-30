@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Preferences for Chatter Bot Groups</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Auto_Create_Private_Chatter_Groups__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>When checked then apex trigger will upsert a Chatter Bot Group record any time a private CollaborationGroup (Chatter Group) is created or updated. When unchecked, an administrator must manually create a Chatter Bot Group record to begin monitoring.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When checked then apex trigger will upsert a Chatter Bot Group record any time a private CollaborationGroup (Chatter Group) is created or updated. When unchecked, an administrator must manually create a Chatter Bot Group record to begin monitoring.</inlineHelpText>
+        <label>Auto Create Private Chatter Groups?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Auto_Create_Public_Chatter_Groups__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>When checked then apex trigger will upsert a Chatter Bot Group record any time a public CollaborationGroup (Chatter Group) is created or updated. When unchecked, an administrator must manually create a Chatter Bot Group record to begin monitoring.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When checked then apex trigger will upsert a Chatter Bot Group record any time a public CollaborationGroup (Chatter Group) is created or updated. When unchecked, an administrator must manually create a Chatter Bot Group record to begin monitoring.</inlineHelpText>
+        <label>Auto Create Public Chatter Groups?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Auto_Create_Unlisted_Chatter_Groups__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>When checked then apex trigger will upsert a Chatter Bot Group record any time an unlisted CollaborationGroup (Chatter Group) is created or updated. When unchecked, an administrator must manually create a Chatter Bot Group record to begin monitoring.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When checked then apex trigger will upsert a Chatter Bot Group record any time an unlisted CollaborationGroup (Chatter Group) is created or updated. When unchecked, an administrator must manually create a Chatter Bot Group record to begin monitoring.</inlineHelpText>
+        <label>Auto Create Unlisted Chatter Groups?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Chatter Bot Groups Setting</label>
+    <visibility>Protected</visibility>
+</CustomObject>
