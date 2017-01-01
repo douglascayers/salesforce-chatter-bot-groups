@@ -5,6 +5,9 @@
         <members>ChatterBotGroupMemberTriggerHandlerTest</members>
         <members>ChatterBotGroupTriggerHandler</members>
         <members>ChatterBotGroupTriggerHandlerTest</members>
+        <members>ChatterBotPostMessageEmailHandler</members>
+        <members>ConnectApiHelper</members>
+        <members>ConnectApiHelperTest</members>
         <name>ApexClass</name>
     </types>
     <types>
