@@ -27,6 +27,14 @@
         <name>CustomTab</name>
     </types>
     <types>
+        <members>Chatter_Bot_Group_Membership_Changes-2</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Chatter_Bot_Group_Membership_Changes</members>
+        <name>FlowDefinition</name>
+    </types>
+    <types>
         <members>Chatter_Bot_Group_Member__c-Chatter Bot Group Member Layout</members>
         <members>Chatter_Bot_Group__c-Chatter Bot Group Layout</members>
         <name>Layout</name>

@@ -130,6 +130,7 @@
         <fields>Member_Count__c</fields>
     </miniLayout>
     <relatedLists>
+        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>Member__c</fields>
         <fields>Role__c</fields>
