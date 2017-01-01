@@ -21,6 +21,11 @@
         <enabled>false</enabled>
     </classAccesses>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Chatter_Bot_Group_Member__c.Chatter_Group_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Chatter_Bot_Group_Member__c.Is_Member__c</field>
         <readable>true</readable>

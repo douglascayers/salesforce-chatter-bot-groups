@@ -74,6 +74,18 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
+        <fullName>Chatter_Group_ID__c</fullName>
+        <description>The Chatter Group ID this user is a member of.</description>
+        <externalId>false</externalId>
+        <formula>Chatter_Bot_Group__r.Chatter_Group_ID__c</formula>
+        <inlineHelpText>The Chatter Group ID this user is a member of.</inlineHelpText>
+        <label>Chatter Group ID</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Chatter_Group_Member_ID__c</fullName>
         <caseSensitive>true</caseSensitive>
         <externalId>true</externalId>
