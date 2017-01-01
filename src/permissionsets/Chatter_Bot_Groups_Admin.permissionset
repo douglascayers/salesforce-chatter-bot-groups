@@ -20,18 +20,6 @@
         <apexClass>ChatterBotGroupTriggerHandlerTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
-    <classAccesses>
-        <apexClass>ChatterBotPostMessageEmailHandler</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>ConnectApiHelper</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>ConnectApiHelperTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
     <fieldPermissions>
         <editable>false</editable>
         <field>Chatter_Bot_Group_Member__c.Chatter_Group_ID__c</field>
