@@ -1,4 +1,7 @@
 /**
+ * Developed by Doug Ayers
+ * douglascayers.com
+ *
  * Note, 'without sharing' is used in this class.
  * Most users will not have sharing access to the Chatter_Bot_Group_Member__c object
  * but we want to ensure this trigger handler can update those records anytime
@@ -7,7 +10,7 @@
  */
 public without sharing class ChatterBotGroupMemberTriggerHandler {
 
-    public void upsertChatterBotGroupMembers( List<CollaborationGroupMember> groupMembers ) {
+    public void upsertChatterBotGroupMembers( List<CollaborationGroupMember> groupMembers, Boolean isMember ) {
 
         // When filtering on lookup fields, Salesforce has special
         // handling to treat 15 and 18 character IDs the same.
@@ -46,7 +49,7 @@ public without sharing class ChatterBotGroupMemberTriggerHandler {
                     chatter_group_member_id__c = member.id,
                     member__c = member.memberId,
                     role__c = member.collaborationRole,
-                    is_member__c = true
+                    is_member__c = isMember
                 ));
 
             }
@@ -82,13 +85,6 @@ public without sharing class ChatterBotGroupMemberTriggerHandler {
             ORDER BY
                 chatter_bot_group__c
         ]);
-
-        for ( Chatter_Bot_Group_Member__c member : chatterBotGroupMembers ) {
-            member.is_member__c = false;
-        }
-
-        // give workflow/process builder chance to react to member leaving group
-        update chatterBotGroupMembers;
 
         // delete records since users no longer group members
         delete chatterBotGroupMembers;

@@ -1,12 +1,18 @@
+/**
+ * Developed by Doug Ayers
+ * douglascayers.com
+ */
 trigger ChatterBotGroupTrigger on CollaborationGroup ( after insert, after update, before delete ) {
+
+    ChatterBotGroupTriggerHandler handler = new ChatterBotGroupTriggerHandler();
 
     if ( Trigger.isInsert || Trigger.isUpdate ) {
 
-        new ChatterBotGroupTriggerHandler().upsertChatterBotGroups( Trigger.new );
+        handler.upsertChatterBotGroups( Trigger.new );
 
     } else if ( Trigger.isDelete ) {
 
-        new ChatterBotGroupTriggerHandler().deleteChatterBotGroups( Trigger.old );
+        handler.deleteChatterBotGroups( Trigger.old );
 
     }
 

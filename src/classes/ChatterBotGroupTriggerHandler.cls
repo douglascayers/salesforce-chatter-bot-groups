@@ -1,4 +1,7 @@
 /**
+ * Developed by Doug Ayers
+ * douglascayers.com
+ *
  * Note, 'without sharing' is used in this class.
  * Most users will not have sharing access to the Chatter_Bot_Group__c object
  * but we want to ensure this trigger handler can update those records anytime
