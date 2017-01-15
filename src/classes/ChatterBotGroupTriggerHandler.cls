@@ -60,6 +60,7 @@ public without sharing class ChatterBotGroupTriggerHandler {
         Boolean autoCreateUnlistedGroups = ( settings != null && settings.auto_create_unlisted_chatter_groups__c );
 
         List<Chatter_Bot_Group__c> chatterBotGroupsToUpsert = new List<Chatter_Bot_Group__c>();
+        List<Chatter_Bot_Group__c> chatterBotGroupsToUpdate = new List<Chatter_Bot_Group__c>();
 
         for ( CollaborationGroup grp : groups ) {
 
@@ -87,7 +88,7 @@ public without sharing class ChatterBotGroupTriggerHandler {
             if ( chatterBotGroup != null && chatterBotGroup.active__c ) {
 
                 chatterBotGroup.chatter_group_id__c = grp.id;
-                chatterBotGroup.group_name__C = grp.name;
+                chatterBotGroup.group_name__c = grp.name;
                 chatterBotGroup.group_owner__c = grp.ownerId;
                 chatterBotGroup.group_description__c = grp.description;
                 chatterBotGroup.group_email__c = grp.groupEmail;
@@ -103,7 +104,11 @@ public without sharing class ChatterBotGroupTriggerHandler {
                 chatterBotGroup.is_archived__c = grp.isArchived;
                 chatterBotGroup.is_broadcast__c = grp.isBroadcast;
 
-                chatterBotGroupsToUpsert.add( chatterBotGroup );
+                if ( String.isNotBlank( chatterBotGroup.id ) ) {
+                    chatterBotGroupsToUpdate.add( chatterBotGroup );
+                } else {
+                    chatterBotGroupsToUpsert.add( chatterBotGroup );
+                }
 
             }
 
@@ -111,6 +116,10 @@ public without sharing class ChatterBotGroupTriggerHandler {
 
         if ( chatterBotGroupsToUpsert.size() > 0 ) {
             Database.upsert( chatterBotGroupsToUpsert, Chatter_Bot_Group__c.Chatter_Group_ID__c );
+        }
+
+        if ( chatterBotGroupsToUpdate.size() > 0 ) {
+            Database.update( chatterBotGroupsToUpdate );
         }
 
     }
