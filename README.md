@@ -20,12 +20,13 @@ Installation
 Getting Started
 ----------------------
 
-1. Deploy code using link above.
-2. Assign **Chatter Bot Groups Admin** permission set to your admin user.
-3. Create a default organization default value for the **Chatter Bot Groups Setting** custom setting.
-4. Switch to **Chatter Bot Groups** app.
-5. Click on **Chatter Bot Group** tab and click New button. Enter a Chatter Group ID value in the `Chatter Group ID` field then click Save button.
-6. Test it out! Update the Chatter Group's description or information text, or maybe add or remove someone from the group. Now navigate back to your **Chatter Bot Group** record to see it's been updated with current details.
+1. Insure "Allow Posts via Email" is set to "allow users to post to groups using email" under Setup -> Customize -> Chatter -> Email Settings.
+2. Deploy code using link above.
+3. Assign **Chatter Bot Groups Admin** permission set to your admin user.
+4. Create a default organization default value for the **Chatter Bot Groups Setting** custom setting.
+5. Switch to **Chatter Bot Groups** app.
+6. Click on **Chatter Bot Group** tab and click New button. Enter a Chatter Group ID value in the `Chatter Group ID` field then click Save button.
+7. Test it out! Update the Chatter Group's description or information text, or maybe add or remove someone from the group. Now navigate back to your **Chatter Bot Group** record to see it's been updated with current details.
 
 ![screen shot](images/chatter-bot-groups-group-record.png)
 
